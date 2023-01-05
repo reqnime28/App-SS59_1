@@ -232,7 +232,7 @@
           {{-- Pesan --}}
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-store"></i>
               <p>
                 Pesan
               </p>
@@ -241,7 +241,7 @@
           {{-- Metode Bayar --}}
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-money-check"></i>
               <p>
                 Metode Pembayaran
               </p>
