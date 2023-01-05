@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('metode_bayars', function (Blueprint $table) {
             $table->id();
+            $table->string('kode')->unique();
+            $table->string('metode_bayar');
             $table->timestamps();
         });
     }

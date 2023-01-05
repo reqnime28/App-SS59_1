@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('pesans', function (Blueprint $table) {
             $table->id();
+            $table->string('no_plg')->unique();
+            $table->string('nama_brg');
+            $table->string('metode_bayars_id');
+            $table->bigInteger('harga');
             $table->timestamps();
         });
     }
