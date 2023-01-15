@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('layouts.master');
-// })->middleware('auth');
-
-Route::get('/master', function () {
+Route::get('/', function () {
     return view('layouts.master');
+})->middleware('auth');
+
+Route::get('/pesan', function () {
+    return view('tabel.pesan');
 });
 
 Auth::routes();
