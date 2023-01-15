@@ -21,6 +21,10 @@ Route::get('/pesan', function () {
     return view('tabel.pesan');
 });
 
+Route::get('/metode_bayar', function () {
+    return view('tabel.metode_bayar');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
