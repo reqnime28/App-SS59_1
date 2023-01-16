@@ -13,7 +13,7 @@ class Metode_BayarController extends Controller
      */
     public function index()
     {
-        //
+        return view('tabel.metode_bayar');
     }
 
     /**

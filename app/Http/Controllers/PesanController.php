@@ -13,7 +13,7 @@ class PesanController extends Controller
      */
     public function index()
     {
-        //
+        return view('tabel.pesan');
     }
 
     /**

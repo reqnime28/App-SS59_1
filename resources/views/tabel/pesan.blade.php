@@ -232,7 +232,7 @@
           </li>
           {{-- Pesan --}}
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="{{ route('pesan') }}" class="nav-link">
               <i class="nav-icon fas fa-store"></i>
               <p>
                 Pesan
@@ -241,7 +241,7 @@
           </li>
           {{-- Metode Bayar --}}
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="{{ route('metode_bayar') }}" class="nav-link">
               <i class="nav-icon fas fa-money-check"></i>
               <p>
                 Metode Pembayaran

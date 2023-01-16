@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PesanController;
+use App\Http\Controllers\Metode_BayarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +19,15 @@ Route::get('/', function () {
     return view('layouts.master');
 })->middleware('auth');
 
-Route::get('/pesan', function () {
-    return view('tabel.pesan');
-});
+// Route::get('/pesan', function () {
+//     return view('tabel.pesan');
+// });
 
-Route::get('/metode_bayar', function () {
-    return view('tabel.metode_bayar');
-});
+// Route::get('/metode_bayar', function () {
+//     return view('tabel.metode_bayar');
+// });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/pesan', [PesanController::class, 'index'])->name('pesan');
+Route::get('/metode_bayar', [Metode_BayarController::class, 'index'])->name('metode_bayar');
