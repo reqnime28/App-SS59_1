@@ -31,3 +31,5 @@ Auth::routes();
 
 Route::get('/pesan', [PesanController::class, 'index'])->name('pesan');
 Route::get('/metode_bayar', [Metode_BayarController::class, 'index'])->name('metode_bayar');
+
+Route::get('/tambah_pesan', [PesanController::class, 'index'])->name('tambah_pesan');
