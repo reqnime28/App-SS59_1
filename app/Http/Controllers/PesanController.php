@@ -38,7 +38,16 @@ class PesanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pesan = new Pesan;
+               //Database    ||   Data Dari Nama Form
+        $pesan->no_plg = $request->no_plg;
+        $pesan->nama_brg = $request->barang;
+        $pesan->metode_bayars_id = $request->bayar;
+        $pesan->harga = $request->harga;
+
+        $pesan->save();
+
+        return redirect('/pesan');
     }
 
     /**

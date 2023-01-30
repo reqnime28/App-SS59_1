@@ -37,4 +37,5 @@ Route::get('/metode_bayar', [Metode_BayarController::class, 'index'])->name('met
 
 //Tambah Data
 Route::get('/pesan/form', [PesanController::class, 'create'])->name('create');
+Route::post('/pesan', [PesanController::class, 'store'])->name('store');
 });

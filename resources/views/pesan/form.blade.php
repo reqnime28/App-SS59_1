@@ -34,7 +34,32 @@
                 </div>
             </div>
             <div class="card-body">
-
+                <form method="POST" action="/pesan">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">No Pelanggan</label>
+                        <input type="text" name="no_plg"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Nama Barang</label>
+                        <input type="text" name="barang" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Metode Pembayaran</label>
+                        <select class="form-control" type="text" nama="bayar" aria-label=".form-select-sm example">
+                            <option selected>Dana</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Harga</label>
+                        <input type="text" nama="harga" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
         </div>
         <!-- /.card -->
