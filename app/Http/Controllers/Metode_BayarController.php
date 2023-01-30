@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Metode_Bayar;
 
 class Metode_BayarController extends Controller
 {
@@ -13,7 +14,7 @@ class Metode_BayarController extends Controller
      */
     public function index()
     {
-        return view('tabel.metode_bayar');
+        return view('metode_bayar.index');
     }
 
     /**
