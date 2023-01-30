@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\pesan;
+use App\Models\Pesan;
 
 class PesanController extends Controller
 {
@@ -14,7 +14,10 @@ class PesanController extends Controller
      */
     public function index()
     {
-        return view('pesan.index');
+        //Urutan Nomor
+        $nomor = 1;
+        $pesan = Pesan::all();
+        return view('pesan.index',compact('nomor','pesan'));
     }
 
     /**
@@ -24,7 +27,7 @@ class PesanController extends Controller
      */
     public function create()
     {
-        //
+        return view('pesan.form');
     }
 
     /**
