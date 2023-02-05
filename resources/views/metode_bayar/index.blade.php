@@ -25,7 +25,7 @@
         <div class="card">
             <div class="card-header">
                 {{-- Tambah Data --}}
-                <a href="#" class="btn btn-success">Tambah +</a>
+                <a href="/metode_bayar/form" class="btn btn-success">Tambah +</a>
                 <table class="table">
                     <thead>
                         <tr>

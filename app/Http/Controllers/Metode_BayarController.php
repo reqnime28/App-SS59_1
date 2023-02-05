@@ -24,7 +24,7 @@ class Metode_BayarController extends Controller
      */
     public function create()
     {
-        //
+        return view('metode_bayar.form');
     }
 
     /**
