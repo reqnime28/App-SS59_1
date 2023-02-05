@@ -1,45 +1,53 @@
 @extends('layouts.master')
-@section('judul','Data Metode Pembayaran')
+@section('judul', 'Data Metode Pembayaran')
 
 @section('content-header')
-<section class="content-header">
-  <div class="container-fluid">
-    <div class="row mb-2">
-      <div class="col-sm-6">
-        <h1>Data Metode Pembayaran</h1>
-      </div>
-      <div class="col-sm-6">
-        <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">Data Metode Pembayaran</li>
-        </ol>
-      </div>
-    </div>
-  </div><!-- /.container-fluid -->
-</section>
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Data Metode Pembayaran</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Data Metode Pembayaran</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
 @endsection
 
 @section('content')
-<section class="content">
-  <!-- Default box -->
-  <div class="card">
-    <div class="card-header">
-      <h3 class="card-title">Title</h3>
+    <section class="content">
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                {{-- Tambah Data --}}
+                <a href="#" class="btn btn-success">Tambah +</a>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Kode</th>
+                            <th scope="col">Metode Pembayaran</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>
+                                <a href="#" class="btn btn-primary">Edit</a>
+                                <a href="#" class="btn btn-danger">Hapus</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /.card -->
 
-      <div class="card-tools">
-        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-          <i class="fas fa-minus"></i>
-        </button>
-        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-    </div>
-    <div class="card-body">
-      Start creating your amazing application!
-    </div>
-  </div>
-  <!-- /.card -->
-
-</section>    
+    </section>
 @endsection
