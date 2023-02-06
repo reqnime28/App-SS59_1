@@ -35,7 +35,14 @@ class Metode_BayarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $metode_bayar = new Metode_Bayar;
+                     //Database    ||   Data Dari Nama Form
+        $metode_bayar->kode = $request->kode;
+        $metode_bayar->metode_bayar = $request->metode_bayar;
+
+        $metode_bayar->save();
+
+        return redirect('/metode_bayar');
     }
 
     /**

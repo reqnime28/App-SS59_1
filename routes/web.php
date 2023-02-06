@@ -40,4 +40,5 @@ Route::get('/pesan/form', [PesanController::class, 'create'])->name('create');
 Route::post('/pesan', [PesanController::class, 'store'])->name('store');
 //Tambah Data Metode Pembayaran
 Route::get('/metode_bayar/form', [Metode_BayarController::class, 'create'])->name('create');
+Route::post('/metode_bayar', [Metode_BayarController::class, 'store'])->name('store');
 });

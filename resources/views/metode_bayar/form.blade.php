@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form method="POST" action="/pesan">
+                <form method="POST" action="/metode_bayar">
                     @csrf
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Kode</label>
