@@ -96,6 +96,9 @@ class Metode_BayarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $metodebayar = Metodebayar::find($id);
+        $metodebayar->delete();
+
+        return redirect('/metode_bayar');
     }
 }

@@ -42,8 +42,42 @@
                                 <td>{{ $item->kode }}</td>
                                 <td>{{ $item->metode_bayar }}</td>
                                 <td>
-                                    <a href="/metode_bayar/edit/{{$item->id}}" class="btn btn-primary">Edit</a>
-                                    <a href="#" class="btn btn-danger">Hapus</a>
+                                    <a href="/metode_bayar/edit/{{ $item->id }}" class="btn btn-primary">Edit</a>
+                                    {{-- Tombol Di Ambil Di AdminLTE3--}}
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                        data-target="#modal-default{{$item->id}}">
+                                        Hapus
+                                    </button>
+                                    {{-- Modal Di Ambil Di AdminLTE3--}}
+                                    <div class="modal fade" id="modal-default{{$item->id}}">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Peringatan!</h4>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Yakin Data {{ $item->metode_bayar }} Ingin Di Hapus?</p>
+                                                </div>
+                                                <div class="modal-footer justify-content-between">
+                                                    <button type="button" class="btn btn-default"
+                                                        data-dismiss="modal">Batal</button>
+                                                        {{-- Proses Delete --}}
+                                                        <form action="/metode_bayar/{{$item->id}}" method="POST">
+                                                            @method('DELETE')
+                                                            @csrf
+                                                            <button type="submit" class="btn btn-primary">Hapus</button>
+                                                        </form>
+                                                    
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach
