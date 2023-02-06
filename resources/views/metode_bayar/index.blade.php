@@ -42,7 +42,7 @@
                                 <td>{{ $item->kode }}</td>
                                 <td>{{ $item->metode_bayar }}</td>
                                 <td>
-                                    <a href="/metode_bayar/edit/" class="btn btn-primary">Edit</a>
+                                    <a href="/metode_bayar/edit/{{$item->id}}" class="btn btn-primary">Edit</a>
                                     <a href="#" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>

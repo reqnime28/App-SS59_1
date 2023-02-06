@@ -66,7 +66,8 @@ class Metode_BayarController extends Controller
      */
     public function edit($id)
     {
-        //
+        $metodebayar = Metodebayar::find($id);
+        return view('metode_bayar.edit',compact('metodebayar'));
     }
 
     /**
@@ -78,7 +79,13 @@ class Metode_BayarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $metodebayar = Metodebayar::find($id);
+
+        $metodebayar->kode = $request->kode;
+        $metodebayar->metode_bayar = $request->metode_bayar;
+        $metodebayar->save();
+
+        return redirect('/metode_bayar');
     }
 
     /**
