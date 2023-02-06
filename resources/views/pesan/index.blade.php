@@ -44,7 +44,7 @@
                             <th scope="col">#</th>
                             <th scope="col">No Pelanggan</th>
                             <th scope="col">Nama Barang</th>
-                            <th scope="col">Tempat/Tanggal Terima</th>
+                            <th scope="col">Tanggal Terima</th>
                             <th scope="col">Metode Pembayaran</th>
                             <th scope="col">Harga</th>
                             <th scope="col">Action</th>
@@ -55,13 +55,15 @@
                         @foreach ($pesan as $item)
                             <tr>
                                 <th scope="row">{{ $nomor++ }}</th>
+                                        {{-- Databases --}}
                                 <td>{{ $item->no_plg }}</td>
                                 <td>{{ $item->nama_brg }}</td>
-                                <td>{{ $item->tanggal_hari }} / {{ $item->tanggal_hari }}</td>
+                                <td>{{ $item->tanggal_hari }}</td>
                                 <td>{{ $item->metodebayars_id }}</td>
                                 <td>{{ $item->harga }}</td>
                                 <td>
-                                    <a href="/metode_bayar/edit/{{ $item->id }}" class="btn btn-primary">Edit</a>
+                                    {{-- Tempat Tombol --}}
+                                    <a href="/pesan/edit/{{ $item->id }}" class="btn btn-primary">Edit</a>
                                     {{-- Tombol Di Ambil Di AdminLTE3 --}}
                                     <button type="button" class="btn btn-danger" data-toggle="modal"
                                         data-target="#modal-default{{ $item->id }}">
@@ -79,13 +81,13 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <p>Yakin Data {{ $item->metode_bayar }} Ingin Di Hapus?</p>
+                                                    <p>Yakin Data {{ $item->nama_brg }} Ingin Di Hapus?</p>
                                                 </div>
                                                 <div class="modal-footer justify-content-between">
                                                     <button type="button" class="btn btn-default"
                                                         data-dismiss="modal">Batal</button>
                                                     {{-- Proses Delete --}}
-                                                    <form action="/metode_bayar/{{ $item->id }}" method="POST">
+                                                    <form action="/pesan/{{ $item->id }}" method="POST">
                                                         @method('DELETE')
                                                         @csrf
                                                         <button type="submit" class="btn btn-primary">Hapus</button>

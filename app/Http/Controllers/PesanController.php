@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pesan;
+use App\Models\Metodebayar;
 
 class PesanController extends Controller
 {
@@ -27,7 +28,9 @@ class PesanController extends Controller
      */
     public function create()
     {
-        return view('pesan.form');
+        // Dari model Metodebayar
+        $metodebayar = Metodebayar::all();
+        return view('pesan.form',compact('metodebayar'));
     }
 
     /**
@@ -43,9 +46,9 @@ class PesanController extends Controller
         $pesan->no_plg = $request->no_plg;
         $pesan->nama_brg = $request->barang;
         $pesan->tanggal_hari = $request->tanggal;
-        $pesan->metode_bayars_id = $request->metode_bayar;
+        $pesan->metodebayars_id = $request->metode_bayar;
         $pesan->harga = $request->harga;
-        $pesan->foto = $request->foto;
+        $pesan->foto = "default.jpg";
 
         $pesan->save();
 

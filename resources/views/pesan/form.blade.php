@@ -41,15 +41,18 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Metode Pembayaran</label>
-                        <input type="text" name="metode_bayar" class="form-control" id="exampleInputPassword1">
+                        <select name="metode_bayar" class="form-control" id="">
+                            <option value="">-Pilih Metode Pembayaran-</option>
+
+                            @foreach($metodebayar as $data)
+                            <option value="{{$data->id}}">{{$data->kode}} - {{$data->metode_bayar}}</option>
+                            @endforeach
+                            
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Harga</label>
-                        <input type="text" nama="harga" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Foto</label>
-                        <input type="text" nama="foto" class="form-control" id="exampleInputPassword1">
+                        <input type="text" name="harga" class="form-control" id="exampleInputPassword1">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
