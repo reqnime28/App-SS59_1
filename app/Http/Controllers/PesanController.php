@@ -110,6 +110,9 @@ class PesanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pesan = Pesan::find($id);
+        $pesan->delete();
+
+        return redirect('/pesan');
     }
 }
