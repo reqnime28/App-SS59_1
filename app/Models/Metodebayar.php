@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Metodebayar extends Model
 {
-    use HasFactory;
+    public function pesan()
+    {
+        return $this->belongsTo(Pesan::class);
+    }
 }

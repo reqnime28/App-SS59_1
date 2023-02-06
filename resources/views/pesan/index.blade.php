@@ -58,9 +58,8 @@
                                         {{-- Databases --}}
                                 <td>{{ $item->no_plg }}</td>
                                 <td>{{ $item->nama_brg }}</td>
-                                <td>{{ $item->tanggal_hari }}</td>
-                            {{--<td>{{ $item->metodebayars_id }}</td> --}}
-                                <td>{{ $item->metode_bayar->metode_bayar }}</td>
+                                <td>{{ date_format(date_create($item->tanggal_hari),"d-M-Y") }}</td>
+                                <td>{{ $item->metodebayars->metode_bayar }}</td>
                                 <td>{{ $item->harga }}</td>
                                 <td>
                                     {{-- Tempat Tombol --}}

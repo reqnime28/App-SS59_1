@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pesan extends Model
 {
-    use HasFactory;
-
-    public function metode_bayar() 
+    public function metodebayars()
     {
-        return $this->hasOne(Metodebayar::class, 'id', 'metodebayars_id');
+        return $this->hasOne(Metodebayar::class,"id","metodebayars_id");
     }
+
+
 }

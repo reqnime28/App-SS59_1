@@ -74,7 +74,7 @@ class PesanController extends Controller
      */
     public function edit($id)
     {
-        $metodebayar = Metodebayar::with('metode_bayar')->all();
+        $metodebayar = Metodebayar::all();
         $pesan = Pesan::find($id);
         return view('pesan.edit',compact('pesan','metodebayar'));
     }
@@ -113,6 +113,6 @@ class PesanController extends Controller
         $pesan = Pesan::find($id);
         $pesan->delete();
 
-        return redirect('/pesan');
+        return redirect('/metode_bayar');
     }
 }
