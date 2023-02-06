@@ -35,13 +35,21 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/pesan', [PesanController::class, 'index'])->name('pesan');
 Route::get('/metode_bayar', [Metode_BayarController::class, 'index'])->name('metode_bayar');
 
-//Tambah Data Pesan
+//=============================================================================================\\
+
+//Tambah Data (Pesan)
 Route::get('/pesan/form', [PesanController::class, 'create'])->name('create');
 Route::post('/pesan', [PesanController::class, 'store'])->name('store');
-//Tambah Data Metode Pembayaran
+
+
+//=============================================================================================\\
+
+//Tambah Data (Metode Pembayaran)
 Route::get('/metode_bayar/form', [Metode_BayarController::class, 'create'])->name('create');
 Route::post('/metode_bayar', [Metode_BayarController::class, 'store'])->name('store');
+//Edit
 Route::get('/metode_bayar/edit/{id}', [Metode_BayarController::class, 'edit'])->name('edit');
 Route::put('/metode_bayar/{id}', [Metode_BayarController::class, 'update'])->name('update');
+//Delete
 Route::delete('/metode_bayar/{id}', [Metode_BayarController::class, 'destroy'])->name('destroy');
 });
