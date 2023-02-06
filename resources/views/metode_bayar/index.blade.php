@@ -36,15 +36,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>
-                                <a href="#" class="btn btn-primary">Edit</a>
-                                <a href="#" class="btn btn-danger">Hapus</a>
-                            </td>
-                        </tr>
+                        @foreach ($metodebayar as $item)
+                            <tr>
+                                <th scope="row">{{ $nomor++ }}</th>
+                                <td>{{ $item->kode }}</td>
+                                <td>{{ $item->metode_bayar }}</td>
+                                <td>
+                                    <a href="/metode_bayar/edit/" class="btn btn-primary">Edit</a>
+                                    <a href="#" class="btn btn-danger">Hapus</a>
+                                </td>
+                            </tr>
+                        @endforeach
+
+
                     </tbody>
                 </table>
                 <!-- /.card -->

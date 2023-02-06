@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Metode_Bayar;
+use App\Models\Metodebayar;
 
 class Metode_BayarController extends Controller
 {
@@ -14,7 +14,9 @@ class Metode_BayarController extends Controller
      */
     public function index()
     {
-        return view('metode_bayar.index');
+        $nomor = 1;
+        $metodebayar = Metodebayar::all();
+        return view('metode_bayar.index',compact('nomor','metodebayar'));
     }
 
     /**
@@ -35,12 +37,12 @@ class Metode_BayarController extends Controller
      */
     public function store(Request $request)
     {
-        $metode_bayar = new Metode_Bayar;
+        $metodebayar = new Metodebayar;
                      //Database    ||   Data Dari Nama Form
-        $metode_bayar->kode = $request->kode;
-        $metode_bayar->metode_bayar = $request->metode_bayar;
+        $metodebayar->kode = $request->kode;
+        $metodebayar->metode_bayar = $request->metode_bayar;
 
-        $metode_bayar->save();
+        $metodebayar->save();
 
         return redirect('/metode_bayar');
     }
