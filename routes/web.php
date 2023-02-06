@@ -40,16 +40,20 @@ Route::get('/metode_bayar', [Metode_BayarController::class, 'index'])->name('met
 //Tambah Data (Pesan)
 Route::get('/pesan/form', [PesanController::class, 'create'])->name('create');
 Route::post('/pesan', [PesanController::class, 'store'])->name('store');
-
+//Edit (Pesan)
+Route::get('/pesan/edit/{id}', [PesanController::class, 'edit'])->name('edit');
+Route::put('/pesan/{id}', [PesanController::class, 'update'])->name('update');
+//Delete (Pesan)
+Route::delete('/pesan/{id}', [PesanController::class, 'destroy'])->name('destroy');
 
 //=============================================================================================\\
 
 //Tambah Data (Metode Pembayaran)
 Route::get('/metode_bayar/form', [Metode_BayarController::class, 'create'])->name('create');
 Route::post('/metode_bayar', [Metode_BayarController::class, 'store'])->name('store');
-//Edit
+//Edit (Metode Pembayaran)
 Route::get('/metode_bayar/edit/{id}', [Metode_BayarController::class, 'edit'])->name('edit');
 Route::put('/metode_bayar/{id}', [Metode_BayarController::class, 'update'])->name('update');
-//Delete
+//Delete (Metode Pembayaran)
 Route::delete('/metode_bayar/{id}', [Metode_BayarController::class, 'destroy'])->name('destroy');
 });

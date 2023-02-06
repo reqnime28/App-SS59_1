@@ -15,8 +15,9 @@ class PesanController extends Controller
     public function index()
     {
         //Urutan Nomor
-
-        return view('pesan.index');
+        $nomor = 1;
+        $pesan = Pesan::all();
+        return view('pesan.index',compact('nomor','pesan'));
     }
 
     /**

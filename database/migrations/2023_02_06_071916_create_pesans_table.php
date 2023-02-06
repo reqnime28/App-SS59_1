@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('no_plg')->unique();
             $table->string('nama_brg');
             $table->date('tanggal_hari');
-            $table->bigInteger('metode_bayars_id');
+            $table->bigInteger('metodebayars_id');
             $table->bigInteger('harga');
             $table->string('foto');
             $table->timestamps();
