@@ -44,8 +44,10 @@
             <th scope="col">#</th>
             <th scope="col">No Pelanggan</th>
             <th scope="col">Nama Barang</th>
+            <th scope="col">Tanggal Terima</th>
             <th scope="col">Metode Pembayaran</th>
             <th scope="col">Harga</th>
+            <th scope="col">Foto Barang</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -56,6 +58,8 @@
             <th scope="row">1</th>
             <td>Mark</td>
             <td>Otto</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
             <td>@mdo</td>
             <td>@mdo</td>
             <td>

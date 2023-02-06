@@ -24,39 +24,32 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-            </div>
             <div class="card-body">
                 <form method="POST" action="/pesan">
                     @csrf
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">No Pelanggan</label>
                         <input type="text" name="no_plg"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Nama Barang</label>
                         <input type="text" name="barang" class="form-control" id="exampleInputPassword1">
                     </div>
                     <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Tanggal Terima</label>
+                        <input type="date" name="tanggal" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Metode Pembayaran</label>
-                        <select class="form-control" type="text" nama="bayar" aria-label=".form-select-sm example">
-                            <option selected>Dana</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                        <input type="text" name="metode_bayar" class="form-control" id="exampleInputPassword1">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Harga</label>
                         <input type="text" nama="harga" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Foto</label>
+                        <input type="text" nama="foto" class="form-control" id="exampleInputPassword1">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

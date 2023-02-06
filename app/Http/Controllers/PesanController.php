@@ -42,8 +42,10 @@ class PesanController extends Controller
                //Database    ||   Data Dari Nama Form
         $pesan->no_plg = $request->no_plg;
         $pesan->nama_brg = $request->barang;
-        $pesan->metode_bayars_id = $request->bayar;
+        $pesan->tanggal_hari = $request->tanggal;
+        $pesan->metode_bayars_id = $request->metode_bayar;
         $pesan->harga = $request->harga;
+        $pesan->foto = $request->foto;
 
         $pesan->save();
 
