@@ -74,7 +74,9 @@ class PesanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $metodebayar = Metodebayar::all();
+        $pesan = Pesan::find($id);
+        return view('pesan.edit',compact('pesan','metodebayar'));
     }
 
     /**
@@ -86,7 +88,18 @@ class PesanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pesan = Pesan::find($id);
+               //Database    ||   Data Dari Nama Form
+        $pesan->no_plg = $request->no_plg;
+        $pesan->nama_brg = $request->barang;
+        $pesan->tanggal_hari = $request->tanggal;
+        $pesan->metodebayars_id = $request->metode_bayar;
+        $pesan->harga = $request->harga;
+        $pesan->foto = "default.jpg";
+
+        $pesan->save();
+
+        return redirect('/pesan');
     }
 
     /**
