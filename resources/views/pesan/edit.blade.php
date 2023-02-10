@@ -46,7 +46,7 @@
                             <option value="">-Pilih Metode Pembayaran-</option>
 
                             @foreach($metodebayar as $data)
-                            <option value="{{$data->id}}">{{$data->kode}} - {{$data->metode_bayar}}</option>
+                            <option value="{{$data->id}}" @selected($data->id == $pesan->metodebayars_id)>{{$data->kode}} - {{$data->metode_bayar}}</option>
                             @endforeach
                             
                         </select>
